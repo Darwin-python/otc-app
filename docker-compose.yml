@@ -1,0 +1,14 @@
+version: "3.9"
+services:
+  otc-app:
+    build: .
+    container_name: otc-app
+    restart: unless-stopped
+    volumes:
+      - ./update:/app/update
+      - ./data:/app/data
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
