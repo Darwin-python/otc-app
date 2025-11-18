@@ -151,8 +151,7 @@ def load_topics_map(path: str = "topics.json", general_topic_id: int = 1) -> tup
     return topic_map, general_topic_id
 
 
-TOPIC_MAP, GENERAL_TOPIC_ID = load_topics_map("topics.json", general_topic_id=1)
-
+TOPIC_MAP, GENERAL_TOPIC_ID = load_topics_map("/app/update/tools/topics.json", general_topic_id=1)
 def get_destinations(
     text: str,
     topic_map: Dict[str, int] = TOPIC_MAP,
