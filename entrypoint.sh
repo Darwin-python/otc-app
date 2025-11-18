@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 set -e
 
-# Запускаем t_collector.py в фоне
+echo "🚀 Starting OTC Collector..."
 python /app/update/t_collector.py &
 
-# Запускаем bot.py (впереди, чтобы контейнер не завершился)
+echo "🤖 Starting Bot..."
 exec python /app/update/bot.py
