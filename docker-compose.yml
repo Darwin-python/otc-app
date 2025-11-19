@@ -8,7 +8,7 @@ services:
     volumes:
       - ./update:/app/update
       - ./data:/app/data
-      - ./sessions:/app/sessions   # 🔥 обязательный маппинг для Telethon!
+      - ./sessions:/app/sessions   
     environment:
       API_ID: "${API_ID}"
       API_HASH: "${API_HASH}"
