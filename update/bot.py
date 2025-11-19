@@ -125,7 +125,7 @@ def compute_rating_percent(likes: int, dislikes: int) -> int:
 
 def stars_from_percent(pct: int, max_stars: int = 5) -> str:
     """
-    0% -> 0 звёзд, 100% -> 5 звёзд. Берём целое число звёзд (можно сделать половинки позже).
+    0% -> 0 звёзд, 100% -> 5 звёзд. Берём целое число звёзд
     """
     full = int(round((pct / 100.0) * max_stars))
     full = max(0, min(max_stars, full))
@@ -372,7 +372,7 @@ def render_post_body(row_id: int, likes: int, dislikes: int) -> str:
     tags = extract_tags(c_text)
     tags_line = ", ".join(tags) if tags else ""
 
-    # Заглушки — позже подставишь реальные значения
+    
     user_total_messages, user_reviews_count = get_user_stats(sender_id)
 
 
