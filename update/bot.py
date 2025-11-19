@@ -27,7 +27,10 @@ logging.basicConfig(
 )
 log = logging.getLogger("otc_bot")  # имя на твой вкус
 
-BOT_TOKEN = "8399795660:AAFxn4x7bwPXNzhJ2RzSGC-6Pkjr9YyuFS4"
+BOT_TOKEN = os.getenv("BOT_TOKEN")
+if not BOT_TOKEN:
+    raise RuntimeError("❌ BOT_TOKEN is missing! Please set environment variable BOT_TOKEN")
+
 OTC_GROUP_USERNAME = "otc_wtb_only"  # ваша группа с репостами
 CHAT_INDEX_FILE = os.path.abspath("otc_chats_index.json")
 _chat_index: dict[str, dict] = {}
