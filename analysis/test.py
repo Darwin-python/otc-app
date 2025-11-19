@@ -12,7 +12,7 @@ from psycopg.rows import dict_row
 
 PG_DSN = os.getenv("PG_DSN", "postgresql://otc_user:supersecret@localhost:5432/otc_app")
 
-# --- словари ключевых слов (можешь расширять) ---
+# --- словари ключевых слов ---
 KNOWN_ITEMS: Dict[str, List[str]] = {
     "exchanges": [
         "binance","bybit","okx","huobi","htx","gate io","bitget","mexc","kucoin","bingx",
