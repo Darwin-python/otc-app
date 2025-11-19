@@ -14,7 +14,7 @@ CREATE TABLE IF NOT EXISTS otc.messages_archive (
     message_id       BIGINT      NOT NULL,
     chat_id          BIGINT      NOT NULL,
     sender_id        BIGINT      NOT NULL,
-    sender_username  TEXT        NULL,                -- 👈 новое поле
+    sender_username  TEXT        NULL,                
     ts_utc           TIMESTAMPTZ NOT NULL,
     text             TEXT        NOT NULL,
     processed        BOOLEAN     NOT NULL DEFAULT FALSE,
